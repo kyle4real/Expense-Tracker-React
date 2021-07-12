@@ -12,7 +12,10 @@ const Balance = () => {
     return (
         <>
             <h4>Your Balance</h4>
-            <h1 id="balance">{moneyFormatter(total)}</h1>
+            <h1 id="balance">
+                {total < 0 && "-"}
+                {moneyFormatter(total)}
+            </h1>
         </>
     );
 };
